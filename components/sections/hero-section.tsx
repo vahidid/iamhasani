@@ -198,9 +198,9 @@ export function HeroSection() {
                 className="flex gap-4 pt-4"
               >
                 {[
-                  { icon: Github, href: "https://github.com", label: "GitHub" },
-                  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                  { icon: Mail, href: "mailto:your@email.com", label: "Email" }
+                  { icon: Github, href: "https://github.com/vahidid", label: "GitHub" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/vahidhasani77", label: "LinkedIn" },
+                  { icon: Mail, href: "mailto:vahidhasani09@gmail.com", label: "Email" }
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}
