@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Enable standalone output for smaller deploy bundles
+  output: "standalone",
 };
 
 export default nextConfig;
