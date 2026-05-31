@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Software Engineer | Creative Portfolio",
-  description: "Personal branding website showcasing my work as a software engineer and full stack developer.",
+  title: "Vahid Hasani | Front-End Developer and Team Lead",
+  description:
+    "Portfolio of Vahid Hasani, a front-end developer and team lead specializing in React, React Native, monorepos, design systems, and blockchain products.",
 };
 
 export default function RootLayout({

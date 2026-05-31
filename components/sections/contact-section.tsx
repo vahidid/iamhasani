@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { GridPattern } from "@/components/ui/grid-pattern";
 
 export function ContactSection() {
@@ -30,15 +30,15 @@ export function ContactSection() {
             Let&apos;s <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Connect</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? Feel free to reach out!
+            Reach out for front-end leadership, architecture, React, React Native, or design system work.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {[
-            { icon: Mail, title: "Email", value: "your.email@example.com", href: "mailto:your.email@example.com" },
-            { icon: MessageSquare, title: "LinkedIn", value: "Connect with me", href: "#" },
-            { icon: Send, title: "Twitter", value: "@yourhandle", href: "#" }
+            { icon: Mail, title: "Email", value: "vahidhasani09@gmail.com", href: "mailto:vahidhasani09@gmail.com" },
+            { icon: Phone, title: "Phone", value: "+98 901 721 8950", href: "tel:+989017218950" },
+            { icon: MapPin, title: "Location", value: "Tehran, Iran", href: "https://www.google.com/maps/place/Tehran" }
           ].map((contact, index) => (
             <motion.a
               key={contact.title}
@@ -65,7 +65,7 @@ export function ContactSection() {
           className="relative"
         >
           <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/90 to-gray-900/50 backdrop-blur-sm border border-gray-800">
-            <form className="space-y-6">
+            <form action="mailto:vahidhasani09@gmail.com" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -110,6 +110,25 @@ export function ContactSection() {
                 Send Message
               </motion.button>
             </form>
+            <div className="mt-8 flex flex-wrap justify-center gap-4 border-t border-gray-800 pt-6">
+              {[
+                { icon: Github, href: "https://github.com/vahidid", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/vahidhasani77", label: "LinkedIn" },
+                { icon: Send, href: "mailto:vahidhasani09@gmail.com", label: "Email" }
+              ].map((item) => (
+                <motion.a
+                  key={item.label}
+                  href={item.href}
+                  whileHover={{ y: -3, scale: 1.04 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="inline-flex items-center gap-2 rounded-lg border border-gray-800 bg-gray-900/60 px-4 py-2 text-sm text-gray-300 transition-colors hover:border-cyan-500/50 hover:text-cyan-300"
+                  aria-label={item.label}
+                >
+                  <item.icon className="h-4 w-4" />
+                  {item.label}
+                </motion.a>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>

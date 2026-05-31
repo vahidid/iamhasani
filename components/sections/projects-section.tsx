@@ -1,43 +1,43 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { RetroGrid } from "@/components/ui/retro-grid";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
-    tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+    title: "Canada Lending Platform",
+    description: "Front-end development for a lending platform at Sahand ICT, including a React web app and cross-platform React Native mobile application.",
+    tech: ["React", "React Native", "TypeScript", "MUI v5"],
     gradient: "from-cyan-500 via-blue-500 to-purple-500",
-    image: "🛍️"
+    image: "CAD"
   },
   {
-    title: "AI Chat Application",
-    description: "Real-time chat application with AI-powered responses, file sharing, and end-to-end encryption.",
-    tech: ["React", "WebSocket", "OpenAI", "MongoDB"],
+    title: "Kuknos Network Products",
+    description: "Built CBDC clients, a Stellar-based DEX, NFT market, browser extension, Poolex payment management, and SKYC identity flows.",
+    tech: ["React", "React Native", "Stellar", "Browser Extension"],
     gradient: "from-purple-500 via-pink-500 to-red-500",
-    image: "💬"
+    image: "DEX"
   },
   {
-    title: "Analytics Dashboard",
-    description: "Data visualization dashboard with real-time analytics, custom reports, and predictive insights.",
-    tech: ["Vue.js", "D3.js", "Python", "Redis"],
+    title: "Digital Certification App",
+    description: "Developed a digital certificate issuing application for signing PDF documents with RSA and ED25519 public key algorithms.",
+    tech: ["React", "Digital Signature", "RSA", "ED25519"],
     gradient: "from-green-500 via-teal-500 to-cyan-500",
-    image: "📊"
+    image: "PDF"
   },
   {
-    title: "DevOps Automation",
-    description: "CI/CD pipeline automation tool with deployment monitoring and rollback capabilities.",
-    tech: ["Docker", "Kubernetes", "GitLab", "AWS"],
+    title: "Freelance Commerce and OTT Platforms",
+    description: "Led product development and delivery for Jimbo Market, behavior analytics services, and a subscription VOD platform.",
+    tech: ["NestJS", "Next.js", "Laravel", "PostgreSQL"],
     gradient: "from-orange-500 via-yellow-500 to-green-500",
-    image: "🚀"
+    image: "OTT"
   }
 ];
 
 export function ProjectsSection() {
   return (
-    <section className="relative py-20 md:py-32 px-4 overflow-hidden">
+    <section id="projects" className="relative py-20 md:py-32 px-4 overflow-hidden">
       {/* Background */}
       <RetroGrid
         className="opacity-30"
@@ -55,10 +55,10 @@ export function ProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Projects</span>
+            Selected <span className="bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Work</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Some of my recent work and side projects
+            Product work from fintech, blockchain, identity, marketplace, and media platforms.
           </p>
         </motion.div>
 
@@ -80,7 +80,9 @@ export function ProjectsSection() {
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className="text-6xl mb-4">{project.image}</div>
+                  <div className={`mb-4 inline-flex h-16 min-w-16 items-center justify-center rounded-2xl bg-linear-to-br ${project.gradient} px-4 text-xl font-black tracking-[0.2em] text-white shadow-lg shadow-black/30`}>
+                    {project.image}
+                  </div>
                   
                   <h3 className="text-2xl font-semibold mb-3 text-white">
                     {project.title}
@@ -102,26 +104,9 @@ export function ProjectsSection() {
                     ))}
                   </div>
                   
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <motion.a
-                      href="#"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                      <span className="text-sm">Code</span>
-                    </motion.a>
-                    <motion.a
-                      href="#"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span className="text-sm">Demo</span>
-                    </motion.a>
+                  <div className="flex items-center gap-2 text-cyan-400">
+                    <ExternalLink className="w-4 h-4" />
+                    <span className="text-sm">Professional project</span>
                   </div>
                 </div>
               </div>

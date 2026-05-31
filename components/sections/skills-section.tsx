@@ -6,22 +6,22 @@ import { GridPattern } from "@/components/ui/grid-pattern";
 const skillCategories = [
   {
     category: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
+    skills: ["React", "React Native", "Next.js", "TypeScript", "MicroFront"],
     color: "from-cyan-500 to-blue-500"
   },
   {
-    category: "Backend",
-    skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis"],
+    category: "UI Systems",
+    skills: ["Material UI", "Ant Design", "Tailwind CSS", "Shadcn", "React Hook Form"],
     color: "from-blue-500 to-purple-500"
   },
   {
-    category: "DevOps",
-    skills: ["Docker", "AWS", "CI/CD", "Kubernetes", "Linux"],
+    category: "State and Data",
+    skills: ["Redux Toolkit", "React Query", "Zustand", "Formik", "Yup", "Zod"],
     color: "from-purple-500 to-pink-500"
   },
   {
-    category: "Tools",
-    skills: ["Git", "VSCode", "Figma", "Postman", "Jira"],
+    category: "Engineering",
+    skills: ["Monorepo", "Cypress", "Webpack", "Vite", "Rspack", "Docker", "Git"],
     color: "from-pink-500 to-cyan-500"
   }
 ];
@@ -56,7 +56,7 @@ export function SkillsSection() {
             Tech <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Stack</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life
+            The tools I use to build maintainable product interfaces and front-end platforms.
           </p>
         </motion.div>
 

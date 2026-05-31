@@ -1,31 +1,31 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { Code2, Laptop, Sparkles, Zap } from "lucide-react";
+import { Boxes, Code2, Laptop, Users } from "lucide-react";
 
 const features = [
   {
     icon: Code2,
-    title: "Clean Code",
-    description: "Writing maintainable, scalable, and elegant code that stands the test of time.",
+    title: "Front-End Architecture",
+    description: "Designing scalable React architectures with clear component boundaries, performance focus, and maintainable code.",
     gradient: "from-cyan-500 to-blue-500"
   },
   {
-    icon: Zap,
-    title: "Fast Performance",
-    description: "Building lightning-fast applications with optimized performance and user experience.",
+    icon: Boxes,
+    title: "Monorepo Systems",
+    description: "Implementing shared libraries, reusable components, and consistent project structure across multiple products.",
     gradient: "from-blue-500 to-purple-500"
   },
   {
-    icon: Sparkles,
-    title: "Modern Tech",
-    description: "Leveraging cutting-edge technologies and best practices in software development.",
+    icon: Laptop,
+    title: "Design Systems",
+    description: "Building cohesive interfaces with Material UI, Tailwind CSS, Shadcn UI, and product-ready responsive patterns.",
     gradient: "from-purple-500 to-pink-500"
   },
   {
-    icon: Laptop,
-    title: "Responsive Design",
-    description: "Creating seamless experiences across all devices and screen sizes.",
+    icon: Users,
+    title: "Team Leadership",
+    description: "Guiding front-end teams, aligning technical decisions with business goals, and mentoring best practices.",
     gradient: "from-pink-500 to-cyan-500"
   }
 ];
@@ -42,10 +42,10 @@ export function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            What I <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Bring</span> to the Table
+            What I <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Bring</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Combining technical expertise with creative problem-solving to deliver exceptional results.
+            Practical front-end leadership for products that need to scale across web, mobile, and teams.
           </p>
         </motion.div>
 

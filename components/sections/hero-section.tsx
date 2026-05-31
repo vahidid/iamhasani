@@ -4,11 +4,9 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import TypingText from "@/components/ui/typing-text";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowDown, Code2, Sparkles, Terminal, Rocket } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export function HeroSection() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
@@ -27,7 +25,6 @@ export function HeroSection() {
       const y = clientY - innerHeight / 2;
       mouseX.set(x);
       mouseY.set(y);
-      setMousePosition({ x: clientX, y: clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -93,7 +90,7 @@ export function HeroSection() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                 </span>
-                <span className="text-cyan-400 text-sm font-medium">Available for opportunities</span>
+                <span className="text-cyan-400 text-sm font-medium">Front-End Developer and Team Lead</span>
               </motion.div>
 
               {/* Main Heading */}
@@ -119,10 +116,10 @@ export function HeroSection() {
                 >
                   <TypingText
                     text={[
-                      "Building digital experiences",
-                      "Crafting elegant code",
-                      "Solving complex problems",
-                      "Creating the future"
+                      "Designing scalable React architecture",
+                      "Leading front-end teams",
+                      "Building design systems",
+                      "Shipping web and mobile products"
                     ]}
                     typingSpeed={80}
                     pauseDuration={2000}
@@ -139,8 +136,9 @@ export function HeroSection() {
                 transition={{ delay: 0.7 }}
                 className="text-lg text-gray-400 leading-relaxed max-w-xl"
               >
-                A passionate software engineer specializing in building exceptional digital experiences. 
-                I focus on creating scalable, performant applications with modern technologies.
+                I design and lead scalable front-end products with React, React Native, TypeScript, Material UI,
+                Tailwind CSS, and Shadcn UI. My work focuses on maintainable architecture, clean component systems,
+                and close collaboration with product, backend, and design teams.
               </motion.p>
 
               {/* Stats */}
@@ -151,9 +149,9 @@ export function HeroSection() {
                 className="flex gap-8 pt-4"
               >
                 {[
-                  { label: "Years Experience", value: "5+" },
-                  { label: "Projects Completed", value: "50+" },
-                  { label: "Happy Clients", value: "30+" }
+                  { label: "Years Experience", value: "6+" },
+                  { label: "Front-End Lead Roles", value: "2" },
+                  { label: "Product Domains", value: "5+" }
                 ].map((stat, index) => (
                   <div key={index} className="text-center lg:text-left">
                     <div className="text-3xl font-bold text-cyan-400">{stat.value}</div>
@@ -169,7 +167,8 @@ export function HeroSection() {
                 transition={{ delay: 1.1 }}
                 className="flex flex-wrap gap-4 pt-4"
               >
-                <motion.button
+                <motion.a
+                  href="#projects"
                   whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)" }}
                   whileTap={{ scale: 0.95 }}
                   className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-lg overflow-hidden"
@@ -179,15 +178,17 @@ export function HeroSection() {
                     <ArrowDown className="w-5 h-5 rotate-[-90deg] group-hover:translate-x-1 transition-transform" />
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </motion.button>
+                </motion.a>
                 
-                <motion.button
+                <motion.a
+                  href="/vahid-hasani-resume.pdf"
+                  download
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border-2 border-cyan-500/50 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-400 transition-all backdrop-blur-sm"
                 >
                   Download CV
-                </motion.button>
+                </motion.a>
               </motion.div>
 
               {/* Social Links */}
@@ -201,7 +202,7 @@ export function HeroSection() {
                   { icon: Github, href: "https://github.com/vahidid", label: "GitHub" },
                   { icon: Linkedin, href: "https://www.linkedin.com/in/vahidhasani77", label: "LinkedIn" },
                   { icon: Mail, href: "mailto:vahidhasani09@gmail.com", label: "Email" }
-                ].map((social, index) => (
+                ].map((social) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
@@ -275,12 +276,12 @@ export function HeroSection() {
                       </div>
                     </motion.div>
                     
-                    <h3 className="text-2xl font-bold text-white mb-2">Full Stack Developer</h3>
-                    <p className="text-gray-400">Transforming ideas into reality</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">Front-End Architect</h3>
+                    <p className="text-gray-400">React systems for fintech and blockchain products</p>
                     
                     {/* Tech Indicators */}
                     <div className="flex gap-3 mt-6">
-                      {["React", "Node", "TS", "AWS"].map((tech, i) => (
+                      {["React", "RN", "TS", "MUI"].map((tech, i) => (
                         <motion.div
                           key={tech}
                           initial={{ opacity: 0, scale: 0 }}
