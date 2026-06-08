@@ -44,7 +44,7 @@ export function FeaturesSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             What I <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Bring</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Practical frontend leadership for fintech, blockchain, and SaaS products that need to scale across web, mobile, and teams.
           </p>
         </motion.div>
@@ -77,7 +77,7 @@ export function FeaturesSection() {
                 <h3 className="text-xl font-semibold mb-3 text-white">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
               </div>

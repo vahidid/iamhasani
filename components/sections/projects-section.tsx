@@ -10,14 +10,16 @@ const projects = [
     description: "Built a React, TypeScript, and MUI v5 lending platform for the Canadian market, improving page load time with code splitting and lazy loading.",
     tech: ["React", "React Native", "TypeScript", "MUI v5"],
     gradient: "from-cyan-500 via-blue-500 to-purple-500",
-    image: "CAD"
+    image: "CAD",
+    href: "https://sahandict.com"
   },
   {
     title: "Kuknos Blockchain Products",
     description: "Delivered CBDC clients, Stellar-based DEX and NFT marketplace flows, wallet interactions, browser extensions, and Secure KYC systems.",
     tech: ["React", "React Native", "Stellar", "KYC"],
     gradient: "from-purple-500 via-pink-500 to-red-500",
-    image: "DEX"
+    image: "DEX",
+    href: "https://kuknos.ir"
   },
   {
     title: "Digital Certification App",
@@ -31,7 +33,8 @@ const projects = [
     description: "Managed Jimbo Market delivery, built behavior analytics services processing 1M+ monthly events, and developed an OTT/VOD subscription platform.",
     tech: ["NestJS", "Next.js", "Laravel", "PostgreSQL"],
     gradient: "from-orange-500 via-yellow-500 to-green-500",
-    image: "OTT"
+    image: "OTT",
+    href: "https://github.com/vahidid"
   }
 ];
 
@@ -55,9 +58,9 @@ export function ProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Selected <span className="bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Work</span>
+            Selected <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Work</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Product work from fintech, blockchain infrastructure, identity verification, marketplace, analytics, and media platforms.
           </p>
         </motion.div>
@@ -88,7 +91,7 @@ export function ProjectsSection() {
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-400 mb-4 leading-relaxed">
+                  <p className="text-gray-300 mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   
@@ -104,10 +107,19 @@ export function ProjectsSection() {
                     ))}
                   </div>
                   
-                  <div className="flex items-center gap-2 text-cyan-400">
-                    <ExternalLink className="w-4 h-4" />
-                    <span className="text-sm">Professional project</span>
-                  </div>
+                  {project.href ? (
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span className="text-sm">View project</span>
+                    </a>
+                  ) : (
+                    <span className="text-sm text-gray-500">Professional project</span>
+                  )}
                 </div>
               </div>
             </motion.div>

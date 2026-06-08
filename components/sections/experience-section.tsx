@@ -95,9 +95,9 @@ export function ExperienceSection() {
           className="mb-16 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-            Professional <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Experience</span>
+            Professional <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Experience</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-gray-400">
+          <p className="mx-auto max-w-2xl text-lg text-gray-300">
             A track record across frontend leadership, fintech, blockchain infrastructure, React Native apps, and product platforms.
           </p>
         </motion.div>

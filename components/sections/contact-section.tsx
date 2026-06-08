@@ -27,9 +27,9 @@ export function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Let&apos;s <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Connect</span>
+            Let&apos;s <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Connect</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Reach out for senior frontend development, React/Next.js architecture, React Native apps, design systems, or fintech and blockchain product work.
           </p>
         </motion.div>
@@ -65,7 +65,7 @@ export function ContactSection() {
           className="relative"
         >
           <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/90 to-gray-900/50 backdrop-blur-sm border border-gray-800">
-            <form action="mailto:vahidhasani09@gmail.com" className="space-y-6">
+            <form action="mailto:vahidhasani09@gmail.com" encType="text/plain" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -73,6 +73,7 @@ export function ContactSection() {
                   </label>
                   <input
                     type="text"
+                    required
                     className="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 text-white placeholder-gray-500 transition-all"
                     placeholder="Your name"
                   />
@@ -83,6 +84,7 @@ export function ContactSection() {
                   </label>
                   <input
                     type="email"
+                    required
                     className="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 text-white placeholder-gray-500 transition-all"
                     placeholder="your@email.com"
                   />
@@ -95,6 +97,7 @@ export function ContactSection() {
                 </label>
                 <textarea
                   rows={5}
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 text-white placeholder-gray-500 transition-all resize-none"
                   placeholder="Tell me about your project..."
                 ></textarea>

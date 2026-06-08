@@ -55,7 +55,7 @@ export function SkillsSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Tech <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Stack</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             The stack behind maintainable product interfaces, frontend platforms, testing workflows, and blockchain-adjacent products.
           </p>
         </motion.div>
