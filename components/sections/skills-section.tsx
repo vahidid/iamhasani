@@ -5,23 +5,23 @@ import { GridPattern } from "@/components/ui/grid-pattern";
 
 const skillCategories = [
   {
-    category: "Frontend",
-    skills: ["React", "React Native", "Next.js", "TypeScript", "MicroFront"],
+    category: "Languages and Frameworks",
+    skills: ["JavaScript", "TypeScript", "React", "Next.js", "React Native"],
     color: "from-cyan-500 to-blue-500"
   },
   {
     category: "UI Systems",
-    skills: ["Material UI", "Ant Design", "Tailwind CSS", "Shadcn", "React Hook Form"],
+    skills: ["Material UI", "Ant Design", "Tailwind CSS", "shadcn/ui", "Design Systems"],
     color: "from-blue-500 to-purple-500"
   },
   {
     category: "State and Data",
-    skills: ["Redux Toolkit", "React Query", "Zustand", "Formik", "Yup", "Zod"],
+    skills: ["Redux Toolkit", "React Query", "Zustand", "React Hook Form", "Formik", "Yup", "Zod"],
     color: "from-purple-500 to-pink-500"
   },
   {
-    category: "Engineering",
-    skills: ["Monorepo", "Cypress", "Webpack", "Vite", "Rspack", "Docker", "Git"],
+    category: "Engineering and Domain",
+    skills: ["Nx / Turborepo", "Cypress", "Vite", "Webpack", "Rspack", "Docker", "Stellar", "RSA / Ed25519"],
     color: "from-pink-500 to-cyan-500"
   }
 ];
@@ -56,7 +56,7 @@ export function SkillsSection() {
             Tech <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Stack</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            The tools I use to build maintainable product interfaces and front-end platforms.
+            The stack behind maintainable product interfaces, frontend platforms, testing workflows, and blockchain-adjacent products.
           </p>
         </motion.div>
 

@@ -30,7 +30,7 @@ export function ContactSection() {
             Let&apos;s <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Connect</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Reach out for front-end leadership, architecture, React, React Native, or design system work.
+            Reach out for senior frontend development, React/Next.js architecture, React Native apps, design systems, or fintech and blockchain product work.
           </p>
         </motion.div>
 

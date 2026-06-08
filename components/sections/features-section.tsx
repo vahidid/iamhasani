@@ -6,26 +6,26 @@ import { Boxes, Code2, Laptop, Users } from "lucide-react";
 const features = [
   {
     icon: Code2,
-    title: "Front-End Architecture",
-    description: "Designing scalable React architectures with clear component boundaries, performance focus, and maintainable code.",
+    title: "Frontend Architecture",
+    description: "Designing scalable React and TypeScript systems with component boundaries, performance focus, and maintainable code.",
     gradient: "from-cyan-500 to-blue-500"
   },
   {
     icon: Boxes,
-    title: "Monorepo Systems",
-    description: "Implementing shared libraries, reusable components, and consistent project structure across multiple products.",
+    title: "Monorepo Modularization",
+    description: "Introducing Nx-style monorepos, shared libraries, and modular project structure across fintech and blockchain products.",
     gradient: "from-blue-500 to-purple-500"
   },
   {
     icon: Laptop,
     title: "Design Systems",
-    description: "Building cohesive interfaces with Material UI, Tailwind CSS, Shadcn UI, and product-ready responsive patterns.",
+    description: "Building cohesive product UI with Material UI, Tailwind CSS, shadcn/ui, responsive patterns, and reusable components.",
     gradient: "from-purple-500 to-pink-500"
   },
   {
     icon: Users,
-    title: "Team Leadership",
-    description: "Guiding front-end teams, aligning technical decisions with business goals, and mentoring best practices.",
+    title: "Quality Leadership",
+    description: "Mentoring engineers, improving PR review workflows, raising Cypress E2E coverage, and aligning delivery with product teams.",
     gradient: "from-pink-500 to-cyan-500"
   }
 ];
@@ -45,7 +45,7 @@ export function FeaturesSection() {
             What I <span className="bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Bring</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Practical front-end leadership for products that need to scale across web, mobile, and teams.
+            Practical frontend leadership for fintech, blockchain, and SaaS products that need to scale across web, mobile, and teams.
           </p>
         </motion.div>
 

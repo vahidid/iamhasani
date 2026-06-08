@@ -7,51 +7,66 @@ import { GridPattern } from "@/components/ui/grid-pattern";
 const experiences = [
   {
     company: "Kuknos Co.",
-    role: "Frontend Team Lead",
-    period: "Mar 2023 - Present",
-    location: "Iran",
+    role: "Senior Frontend Developer",
+    period: "Sep 2024 - Present",
+    location: "Tehran, Iran",
     points: [
-      "Led front-end developers in building scalable React applications with a focus on performance and maintainability.",
-      "Implemented a monorepo architecture for shared components and libraries across multiple projects.",
-      "Built and maintained a design system with Material UI, Tailwind CSS, and Shadcn UI."
+      "Led a team of 5+ frontend engineers building scalable React and TypeScript applications across fintech and blockchain products.",
+      "Introduced and maintained an Nx-style monorepo architecture, improving code reuse by about 40% and reducing cross-project inconsistencies.",
+      "Built a cohesive MUI, Tailwind CSS, and shadcn/ui design system adopted across 4+ products, reducing UI delivery time by about 30%.",
+      "Championed Cypress E2E standards and structured PR review workflows, raising test coverage by about 60% and reducing production bugs."
     ],
     accent: "from-cyan-500 to-blue-500"
   },
   {
     company: "Sahand ICT",
-    role: "Frontend Team Lead",
+    role: "Senior Frontend Developer",
     period: "May 2023 - Aug 2024",
-    location: "Remote",
+    location: "Remote / Canada",
     points: [
-      "Developed a lending platform based in Canada.",
-      "Built a cross-platform React Native application for Android and iOS.",
-      "Delivered a React, TypeScript, and MUI v5 web application."
+      "Built a lending web platform for the Canadian market using React, TypeScript, and Material UI v5.",
+      "Improved page load time by about 35% through code splitting and lazy loading.",
+      "Delivered a cross-platform React Native app for iOS and Android with 98% feature parity with the web platform.",
+      "Improved accessibility through WCAG-focused implementation and API integration work."
     ],
     accent: "from-blue-500 to-purple-500"
   },
   {
     company: "Kuknos Co.",
     role: "Frontend Developer",
-    period: "Mar 2021 - Present",
-    location: "Iran",
+    period: "Mar 2021 - Mar 2023",
+    location: "Tehran, Iran",
     points: [
-      "Developed CBDC client applications, DEX, NFT market, SKYC, Poolex, and browser extension products.",
-      "Shipped features across mobile, desktop, and browser extension platforms.",
-      "Created digital certification flows for PDF signing using RSA and ED25519 key pairs."
+      "Delivered CBDC client applications using React Native and React.js for 100K+ end users.",
+      "Built a Stellar-based DEX and NFT marketplace with performant wallet and transaction flows.",
+      "Created Chrome and Firefox browser extensions for blockchain-based transactions.",
+      "Designed and developed Secure KYC flows processing 50K+ identity verifications.",
+      "Implemented digital certification and PDF signing with RSA and Ed25519 keys."
     ],
     accent: "from-purple-500 to-pink-500"
   },
   {
-    company: "Areatak / Freelance",
+    company: "Areatak",
     role: "Backend and Blockchain Developer",
-    period: "Jul 2019 - Oct 2022",
-    location: "Iran",
+    period: "Oct 2020 - Feb 2021",
+    location: "Tehran, Iran",
     points: [
-      "Developed Hyperledger Fabric chain-code with JavaScript and TypeScript.",
-      "Built backend services with NestJS and Laravel for wallet, marketplace, analytics, and OTT products.",
-      "Worked across Next.js, React, PostgreSQL, queues, Redis, and product team management."
+      "Developed enterprise chaincode on Hyperledger Fabric using JavaScript and TypeScript.",
+      "Built NestJS wallet backend services supporting high-volume wallet operations."
     ],
     accent: "from-pink-500 to-cyan-500"
+  },
+  {
+    company: "Freelance",
+    role: "Backend Developer",
+    period: "Jul 2019 - Sep 2020",
+    location: "Remote",
+    points: [
+      "Managed product development for Jimbo Market, leading a team of 4+ engineers end to end.",
+      "Developed Laravel backend services and a Node.js/NestJS user-behavior analytics microservice processing 1M+ events per month.",
+      "Built a React and Ant Design PWA plus an OTT/VOD subscription service using NestJS, Next.js, PostgreSQL, Redis, and queues."
+    ],
+    accent: "from-cyan-500 to-purple-500"
   }
 ];
 
@@ -83,7 +98,7 @@ export function ExperienceSection() {
             Professional <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Experience</span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-400">
-            A track record across front-end leadership, fintech, blockchain, mobile apps, and product platforms.
+            A track record across frontend leadership, fintech, blockchain infrastructure, React Native apps, and product platforms.
           </p>
         </motion.div>
 

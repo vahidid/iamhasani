@@ -6,29 +6,29 @@ import { RetroGrid } from "@/components/ui/retro-grid";
 
 const projects = [
   {
-    title: "Canada Lending Platform",
-    description: "Front-end development for a lending platform at Sahand ICT, including a React web app and cross-platform React Native mobile application.",
+    title: "Canadian Lending Platform",
+    description: "Built a React, TypeScript, and MUI v5 lending platform for the Canadian market, improving page load time with code splitting and lazy loading.",
     tech: ["React", "React Native", "TypeScript", "MUI v5"],
     gradient: "from-cyan-500 via-blue-500 to-purple-500",
     image: "CAD"
   },
   {
-    title: "Kuknos Network Products",
-    description: "Built CBDC clients, a Stellar-based DEX, NFT market, browser extension, Poolex payment management, and SKYC identity flows.",
-    tech: ["React", "React Native", "Stellar", "Browser Extension"],
+    title: "Kuknos Blockchain Products",
+    description: "Delivered CBDC clients, Stellar-based DEX and NFT marketplace flows, wallet interactions, browser extensions, and Secure KYC systems.",
+    tech: ["React", "React Native", "Stellar", "KYC"],
     gradient: "from-purple-500 via-pink-500 to-red-500",
     image: "DEX"
   },
   {
     title: "Digital Certification App",
-    description: "Developed a digital certificate issuing application for signing PDF documents with RSA and ED25519 public key algorithms.",
-    tech: ["React", "Digital Signature", "RSA", "ED25519"],
+    description: "Implemented digital certification and PDF signing flows using RSA and Ed25519 keys, reducing manual signing effort.",
+    tech: ["React", "Digital Signature", "RSA", "Ed25519"],
     gradient: "from-green-500 via-teal-500 to-cyan-500",
     image: "PDF"
   },
   {
-    title: "Freelance Commerce and OTT Platforms",
-    description: "Led product development and delivery for Jimbo Market, behavior analytics services, and a subscription VOD platform.",
+    title: "Commerce, Analytics, and OTT",
+    description: "Managed Jimbo Market delivery, built behavior analytics services processing 1M+ monthly events, and developed an OTT/VOD subscription platform.",
     tech: ["NestJS", "Next.js", "Laravel", "PostgreSQL"],
     gradient: "from-orange-500 via-yellow-500 to-green-500",
     image: "OTT"
@@ -58,7 +58,7 @@ export function ProjectsSection() {
             Selected <span className="bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Work</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Product work from fintech, blockchain, identity, marketplace, and media platforms.
+            Product work from fintech, blockchain infrastructure, identity verification, marketplace, analytics, and media platforms.
           </p>
         </motion.div>
 

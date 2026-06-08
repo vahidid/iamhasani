@@ -112,7 +112,7 @@ export function HeroSection() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                 </span>
-                <span className="text-cyan-400 text-sm font-medium">Front-End Developer and Team Lead</span>
+                <span className="text-cyan-400 text-sm font-medium">Senior Frontend Developer</span>
               </motion.div>
 
               {/* Main Heading */}
@@ -138,10 +138,10 @@ export function HeroSection() {
                 >
                   <TypingText
                     text={[
-                      "Designing scalable React architecture",
-                      "Leading front-end teams",
-                      "Building design systems",
-                      "Shipping web and mobile products"
+                      "Scaling fintech and blockchain products",
+                      "Leading React and TypeScript teams",
+                      "Building monorepos and design systems",
+                      "Shipping web and React Native apps"
                     ]}
                     typingSpeed={80}
                     pauseDuration={2000}
@@ -158,9 +158,9 @@ export function HeroSection() {
                 transition={{ delay: 0.7 }}
                 className="text-lg text-gray-400 leading-relaxed max-w-xl"
               >
-                I design and lead scalable front-end products with React, React Native, TypeScript, Material UI,
-                Tailwind CSS, and Shadcn UI. My work focuses on maintainable architecture, clean component systems,
-                and close collaboration with product, backend, and design teams.
+                Senior Frontend Developer with 5+ years of experience building and scaling web and mobile
+                applications across fintech, blockchain, and SaaS. I specialize in React, Next.js, React Native,
+                TypeScript, front-end architecture, monorepos, design systems, performance, testing, and clean delivery.
               </motion.p>
 
               {/* Stats */}
@@ -171,9 +171,9 @@ export function HeroSection() {
                 className="flex gap-8 pt-4"
               >
                 {[
-                  { label: "Years Experience", value: "6+" },
-                  { label: "Front-End Lead Roles", value: "2" },
-                  { label: "Product Domains", value: "5+" }
+                  { label: "Years Experience", value: "5+" },
+                  { label: "Frontend Engineers Led", value: "5+" },
+                  { label: "End Users Served", value: "100K+" }
                 ].map((stat, index) => (
                   <div key={index} className="text-center lg:text-left">
                     <div className="text-3xl font-bold text-cyan-400">{stat.value}</div>
@@ -311,12 +311,12 @@ export function HeroSection() {
                       </div>
                     </motion.div>
                     
-                    <h3 className="text-2xl font-bold text-white mb-2">Front-End Architect</h3>
-                    <p className="text-gray-400">React systems for fintech and blockchain products</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">Senior Frontend Developer</h3>
+                    <p className="text-gray-400">React, Next.js, and React Native systems for fintech and blockchain products</p>
                     
                     {/* Tech Indicators */}
                     <div className="flex gap-3 mt-6">
-                      {["React", "RN", "TS", "MUI"].map((tech, i) => (
+                      {["React", "Next.js", "RN", "TS"].map((tech, i) => (
                         <motion.div
                           key={tech}
                           initial={{ opacity: 0, scale: 0 }}
