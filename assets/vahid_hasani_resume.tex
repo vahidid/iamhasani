@@ -1,0 +1,224 @@
+\documentclass[10pt, a4paper]{article}
+
+% ─── Packages ─────────────────────────────────────────────
+\usepackage[top=0.65in, bottom=0.65in, left=0.70in, right=0.70in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[expansion=false]{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+
+% ─── Color palette ────────────────────────────────────────
+\definecolor{accent}{RGB}{0, 102, 204}
+\definecolor{darkgray}{RGB}{30, 30, 30}
+\definecolor{medgray}{RGB}{90, 90, 90}
+\definecolor{lightgray}{RGB}{230, 230, 230}
+
+% ─── Hyperlinks ───────────────────────────────────────────
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = accent,
+  linkcolor  = accent
+}
+
+% ─── Section styling ──────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{darkgray}}
+  {}{0em}{}
+  [\vspace{1pt}\color{accent}\hrule height 0.8pt\vspace{2pt}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+% ─── No page numbers ──────────────────────────────────────
+\pagestyle{empty}
+
+% ─── List spacing ─────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin = 1.4em,
+  itemsep    = 1.5pt,
+  parsep     = 0pt,
+  topsep     = 2pt,
+  label      = \textcolor{accent}{\textbullet}
+}
+
+% ─── Custom commands ──────────────────────────────────────
+\newcommand{\resumeEntry}[4]{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{\large #1} & \textit{\small\color{medgray}#2}\\[1pt]
+    \textcolor{accent}{\textit{#3}} & \textit{\small\color{medgray}#4}
+  \end{tabularx}
+  \vspace{3pt}
+}
+
+\newcommand{\separator}{\vspace{7pt}}
+
+% ══════════════════════════════════════════════════════════
+\begin{document}
+% ══════════════════════════════════════════════════════════
+
+% ─── HEADER ───────────────────────────────────────────────
+\begin{center}
+  {\fontsize{28}{32}\bfseries\color{darkgray} Vahid Hasani}\\[3pt]
+  {\large\color{accent}\textbf{SENIOR FRONTEND DEVELOPER}}\\[6pt]
+  {\small
+    \href{mailto:vahidhasani09@gmail.com}{vahidhasani09@gmail.com}
+    \;\textcolor{lightgray}{|}\;
+    Tehran, Iran \textit{(Open to Remote)}
+    \;\textcolor{lightgray}{|}\;
+    \href{https://www.linkedin.com/in/vahidhasani77}{linkedin.com/in/vahidhasani77}
+    \;\textcolor{lightgray}{|}\;
+    \href{https://github.com/vahidid}{github.com/vahidid}
+    \;\textcolor{lightgray}{|}\;
+    English: Professional Working Proficiency
+  }
+\end{center}
+
+\vspace{2pt}
+\noindent\textcolor{lightgray}{\hrule}
+\vspace{6pt}
+
+% ─── PROFESSIONAL SUMMARY ─────────────────────────────────
+\noindent
+Senior Frontend Developer with \textbf{5+ years} of experience building and scaling web and mobile
+applications across fintech, blockchain, and SaaS domains. Deep expertise in \textbf{React, Next.js,
+React Native,} and \textbf{TypeScript}, with a proven track record of shipping CBDC wallets, DEX/NFT
+platforms, and KYC systems. Experienced in front-end architecture, monorepos, design systems, and
+cross-functional leadership. Passionate about performance, developer experience, testing, and delivering
+clean, maintainable code in remote, fast-moving environments.
+
+\vspace{4pt}
+
+% ─── KEY COMPETENCIES ─────────────────────────────────────
+\section{Key Competencies}
+
+\begin{multicols}{3}
+\begin{itemize}[leftmargin=*, topsep=0pt]
+  \item Front-End Architecture \& Component Design
+  \item Monorepo \& Modularization (Nx / Turborepo)
+  \item Design Systems (MUI, Tailwind, shadcn/ui)
+  \item Cross-Platform Apps (React Native: iOS/Android)
+  \item State Management: Redux Toolkit, Zustand
+  \item Data Fetching: React Query
+  \item Form Handling: RHF / Formik (Yup / Zod)
+  \item Build Tools: Vite, Webpack, Rspack
+  \item Micro-frontend Patterns
+  \item Testing \& Quality: Cypress, E2E/UI
+  \item Web Security \& Digital Signatures (RSA, Ed25519)
+  \item Mentoring, Code Review \& Cross-team Collaboration
+\end{itemize}
+\end{multicols}
+
+% ─── PROFESSIONAL EXPERIENCE ──────────────────────────────
+\section{Professional Experience}
+
+%% --- Kuknos Senior
+\resumeEntry{Senior Frontend Developer}{Sep 2024 -- Present}%
+{Kuknos Co. \normalfont\textit{--- Iran's leading CBDC \& Blockchain infrastructure startup}}{Tehran, Iran}
+
+\begin{itemize}
+  \item Led a team of \textbf{5+ frontend engineers} building scalable React/TypeScript applications
+        across fintech and blockchain products.
+  \item Introduced and maintained a monorepo architecture (Nx-style), improving code reuse by
+        \textbf{\textasciitilde{}40\%} and eliminating cross-project inconsistencies.
+  \item Built a cohesive design system (MUI + Tailwind CSS + shadcn/ui) adopted across \textbf{4+
+        products}, reducing UI delivery time by \textbf{\textasciitilde{}30\%}.
+  \item Partnered closely with product managers and backend teams to align roadmaps, improving
+        sprint predictability by \textbf{\textasciitilde{}25\%} and reducing delivery risk.
+  \item Championed Cypress-based E2E testing standards and structured PR review workflows, raising
+        test coverage by \textbf{\textasciitilde{}60\%} and reducing production bug rate by
+        \textbf{\textasciitilde{}35\%}.
+\end{itemize}
+
+\separator
+
+%% --- Sahand ICT
+\resumeEntry{Senior Frontend Developer}{May 2023 -- Aug 2024}%
+{Sahand ICT \normalfont\textit{--- Canadian fintech company}}{Remote / Canada}
+
+\begin{itemize}
+  \item Built a full-featured lending web platform for the Canadian market using \textbf{React (MUI
+        v5)} and TypeScript, achieving a \textbf{\textasciitilde{}35\%} improvement in page load time
+        through code-splitting and lazy loading.
+  \item Delivered a cross-platform \textbf{React Native} app for iOS and Android with \textbf{98\%}
+        feature parity with the web platform, significantly reducing maintenance overhead.
+  \item Collaborated on REST API integration, UI performance optimisation, and WCAG-compliant
+        accessibility, improving the Lighthouse accessibility score by \textbf{\textasciitilde{}20
+        points}.
+\end{itemize}
+
+\separator
+
+%% --- Kuknos Frontend Dev
+\resumeEntry{Frontend Developer}{Mar 2021 -- Mar 2023}%
+{Kuknos Co.}{Tehran, Iran}
+
+\begin{itemize}
+  \item Delivered client applications for Iran's national bank \textbf{CBDC initiative} using React
+        Native and React.js, serving \textbf{100K+ end users}.
+  \item Built a \textbf{Stellar-based DEX and NFT marketplace}; implemented performant UI flows and
+        wallet interactions handling \textbf{10K+ daily transactions}.
+  \item Created \textbf{Chrome \& Firefox browser extensions} to enable blockchain-based
+        transactions, reaching \textbf{5K+ active users}.
+  \item Designed and developed the \textbf{Secure KYC (SKYC)} application, processing \textbf{50K+
+        identity verifications} with a fraud-detection accuracy of \textbf{99.2\%}.
+  \item Implemented digital certification and PDF signing with \textbf{RSA} and \textbf{Ed25519}
+        keys, reducing manual signing time by \textbf{\textasciitilde{}40\%}.
+\end{itemize}
+
+\separator
+
+%% --- Areatak
+\resumeEntry{Backend \& Blockchain Developer}{Oct 2020 -- Feb 2021}%
+{Areatak}{Tehran, Iran}
+
+\begin{itemize}
+  \item Developed enterprise chaincode on \textbf{Hyperledger Fabric} using JavaScript and
+        TypeScript, contributing to a production-grade permissioned blockchain network.
+  \item Built wallet application backend services with \textbf{NestJS}, supporting
+        \textbf{10K+ wallet operations per day} with high availability.
+\end{itemize}
+
+\separator
+
+%% --- Freelance
+\resumeEntry{Backend Developer}{Jul 2019 -- Sep 2020}%
+{Freelance}{Remote}
+
+\begin{itemize}
+  \item Managed product development for \textbf{Jimbo Market}, an online shopping platform,
+        leading a team of \textbf{4+ engineers} end-to-end.
+  \item Developed backend services (\textbf{Laravel}) and a user-behaviour analytics
+        microservice (NodeJS / NestJS), processing \textbf{1M+ events per month}.
+  \item Built the PWA frontend with \textbf{ReactJS} and Ant Design; developed an
+        \textbf{OTT/VOD subscription} service using NestJS, NextJS, PostgreSQL, Redis, and Queue.
+\end{itemize}
+
+% ─── TECHNICAL SKILLS ─────────────────────────────────────
+\section{Technical Skills}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{@{} >{\bfseries}p{3cm} X @{}}
+  Languages       & JavaScript, TypeScript \\
+  Frameworks      & React, Next.js, React Native, Material UI, Ant Design, Tailwind CSS, shadcn/ui \\
+  State / Data    & Redux Toolkit, React Query, Zustand, React Hook Form, Formik, Yup, Zod \\
+  Build / Tooling & Vite, Webpack, Rspack, Micro-frontend patterns \\
+  Testing         & Cypress (E2E \& UI testing) \\
+  DevOps / CI     & Git, Docker, Linux, GitHub Actions, GitLab CI \\
+  Databases       & PostgreSQL, MySQL, MongoDB \\
+  Blockchain      & Stellar, Hyperledger Fabric (basic), Digital Signature (RSA / Ed25519) \\
+\end{tabularx}
+
+% ─── EDUCATION ────────────────────────────────────────────
+\section{Education}
+
+\resumeEntry{B.Sc. in Computer Engineering}{[Graduation Year]}%
+{[University Name]}{[City, Iran]}
+
+% ══════════════════════════════════════════════════════════
+\end{document}

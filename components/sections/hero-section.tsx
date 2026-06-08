@@ -3,10 +3,11 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import TypingText from "@/components/ui/typing-text";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowDown, Code2, Sparkles, Terminal, Rocket } from "lucide-react";
-import { useEffect } from "react";
+import { Github, Linkedin, Mail, ArrowDown, Code2, Sparkles, Terminal, Rocket, FileText, ExternalLink, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function HeroSection() {
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   
@@ -30,6 +31,27 @@ export function HeroSection() {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
+
+  useEffect(() => {
+    if (!isResumeOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsResumeOpen(false);
+      }
+    };
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isResumeOpen]);
 
   const floatingIcons = [
     { Icon: Code2, delay: 0, position: "top-20 left-[10%]" },
@@ -167,17 +189,30 @@ export function HeroSection() {
                 transition={{ delay: 1.1 }}
                 className="flex flex-wrap gap-4 pt-4"
               >
-                <motion.a
-                  href="#projects"
+                <motion.button
+                  type="button"
+                  onClick={() => setIsResumeOpen(true)}
                   whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)" }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-lg overflow-hidden"
+                  className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-lg overflow-hidden cursor-pointer"
                 >
                   <span className="relative z-10 flex items-center gap-2">
+                    <FileText className="w-5 h-5" />
+                    View Resume
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </motion.button>
+
+                <motion.a
+                  href="#projects"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group px-8 py-4 border-2 border-cyan-500/50 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-400 transition-all backdrop-blur-sm"
+                >
+                  <span className="flex items-center gap-2">
                     View Projects
                     <ArrowDown className="w-5 h-5 rotate-[-90deg] group-hover:translate-x-1 transition-transform" />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </motion.a>
                 
                 <motion.a
@@ -185,7 +220,7 @@ export function HeroSection() {
                   download
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-cyan-500/50 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-400 transition-all backdrop-blur-sm"
+                  className="px-8 py-4 border-2 border-gray-700 rounded-xl font-semibold text-lg text-gray-300 hover:bg-white/10 hover:border-gray-500 hover:text-white transition-all backdrop-blur-sm"
                 >
                   Download CV
                 </motion.a>
@@ -320,6 +355,60 @@ export function HeroSection() {
           </div>
         </div>
       </div>
+
+      {isResumeOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md p-3 sm:p-6 lg:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Resume preview"
+          onClick={() => setIsResumeOpen(false)}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 24, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.2 }}
+            className="mx-auto flex h-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-cyan-500/25 bg-gray-950 shadow-2xl shadow-cyan-950/30"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-black/60 px-4 py-3 sm:px-5">
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-white">Vahid Hasani Resume</p>
+                <p className="text-xs text-gray-400">Preview generated from the LaTeX resume file</p>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <a
+                  href="/vahid-hasani-resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex h-10 items-center gap-2 rounded-lg border border-white/10 px-3 text-sm font-medium text-gray-200 transition-colors hover:border-cyan-400 hover:text-cyan-300"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Open
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setIsResumeOpen(false)}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-gray-300 transition-colors hover:border-cyan-400 hover:text-cyan-300"
+                  aria-label="Close resume preview"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+
+            <iframe
+              src="/vahid-hasani-resume.pdf#view=FitH"
+              title="Vahid Hasani resume preview"
+              className="min-h-0 flex-1 bg-white"
+            />
+          </motion.div>
+        </motion.div>
+      )}
 
       {/* Scroll Indicator */}
       <motion.div
