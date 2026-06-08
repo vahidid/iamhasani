@@ -3,10 +3,14 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import TypingText from "@/components/ui/typing-text";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowDown, Code2, Sparkles, Terminal, Rocket, FileText, ExternalLink, X } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, Code2, Sparkles, Terminal, Rocket, FileText, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-export function HeroSection() {
+type HeroSectionProps = {
+  resumeTex: string;
+};
+
+export function HeroSection({ resumeTex }: HeroSectionProps) {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -377,19 +381,10 @@ export function HeroSection() {
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-black/60 px-4 py-3 sm:px-5">
               <div className="min-w-0">
                 <p className="text-sm font-semibold text-white">Vahid Hasani Resume</p>
-                <p className="text-xs text-gray-400">Preview generated from the LaTeX resume file</p>
+                <p className="text-xs text-gray-400">Raw LaTeX source: assets/vahid_hasani_resume.tex</p>
               </div>
 
               <div className="flex items-center gap-2">
-                <a
-                  href="/vahid-hasani-resume.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex h-10 items-center gap-2 rounded-lg border border-white/10 px-3 text-sm font-medium text-gray-200 transition-colors hover:border-cyan-400 hover:text-cyan-300"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                  Open
-                </a>
                 <button
                   type="button"
                   onClick={() => setIsResumeOpen(false)}
@@ -401,11 +396,11 @@ export function HeroSection() {
               </div>
             </div>
 
-            <iframe
-              src="/vahid-hasani-resume.pdf#view=FitH"
-              title="Vahid Hasani resume preview"
-              className="min-h-0 flex-1 bg-white"
-            />
+            <div className="min-h-0 flex-1 overflow-auto bg-[#05070b]">
+              <pre className="min-h-full w-max min-w-full p-4 text-left font-mono text-[12px] leading-5 text-gray-100 sm:p-6 sm:text-sm">
+                <code>{resumeTex}</code>
+              </pre>
+            </div>
           </motion.div>
         </motion.div>
       )}
